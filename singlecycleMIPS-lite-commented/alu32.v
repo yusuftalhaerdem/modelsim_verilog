@@ -10,16 +10,13 @@ always @(a or b or gin)
 begin
 	case(gin)
 	3'b010: sum=a+b; 		//ALU control line=010, ADD
-	3'b110: sum=a+1+(~b);		//ALU control line=110, SUB
+	3'b110: sum=a+1+(~b);	//ALU control line=110, SUB
 	3'b111: begin less=a+1+(~b);	//ALU control line=111, set on less than
 			if (less[31]) sum=1;	
 			else sum=0;
 		  end
-	3'b000: sum=a & b;		//ALU control line=000, AND
+	3'b000: sum=a & b;	//ALU control line=000, AND
 	3'b001: sum=a|b;		//ALU control line=001, OR
-	3'b100: sum= (~a)&(~b);		//ALU control line=100, NOR 
-	3'b011: sum= b<<a;		//ALU control line=011, SLL
-
 	default: sum=31'bx;	
 	endcase
 zout=~(|sum);

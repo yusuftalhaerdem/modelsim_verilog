@@ -1,0 +1,218 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented
+vadder
+Z0 !s110 1623615352
+!i10b 1
+!s100 gWb<;Y:[8c^V3JALeYLDZ1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I=42;[@NKHcHdk04XfU2Uh1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented
+w1623615246
+8C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/adder.v
+FC:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/adder.v
+!i122 0
+Z4 L0 1 5
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1623615352.000000
+!s107 C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/adder.v|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+valu32
+R0
+!i10b 1
+!s100 642S2CI=2JZ[e3A8<IAES1
+R1
+I]neIigaEhnGCoe::Jd5HJ2
+R2
+R3
+Z9 w1623615247
+8C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/alu32.v
+FC:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/alu32.v
+!i122 1
+L0 1 24
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/alu32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/alu32.v|
+!i113 1
+R7
+R8
+valucont
+Z10 !s110 1623615353
+!i10b 1
+!s100 WNj?TV[KMiShkFIW>Oe6^3
+R1
+I<<iTmUbe:K?GLanEHf<cY1
+R2
+R3
+R9
+8C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/alucont.v
+FC:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/alucont.v
+!i122 2
+Z11 L0 1 18
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/alucont.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/alucont.v|
+!i113 1
+R7
+R8
+vcontrol
+R10
+!i10b 1
+!s100 PhfnL9fC73L`o8o3fEA3b3
+R1
+IM>=WSC;3WH3_1:>R^XE[I1
+R2
+R3
+R9
+8C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/control.v
+FC:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/control.v
+!i122 3
+R11
+R5
+r1
+!s85 0
+31
+Z12 !s108 1623615353.000000
+!s107 C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/control.v|
+!i113 1
+R7
+R8
+vmult2_to_1_32
+R10
+!i10b 1
+!s100 Y_Id<LIRQ3DbCYAcIf6lb3
+R1
+IeOl`MCOXRdET_P18CS<`^1
+R2
+R3
+R9
+8C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/mult2_to_1_32.v
+FC:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/mult2_to_1_32.v
+!i122 5
+Z13 L0 1 6
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/mult2_to_1_32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/mult2_to_1_32.v|
+!i113 1
+R7
+R8
+vmult2_to_1_5
+R10
+!i10b 1
+!s100 QeR<>khHHW047@W2MP@;I2
+R1
+I@Kj0ZC:>P5DOfD_5j53QH0
+R2
+R3
+R9
+8C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/mult2_to_1_5.v
+FC:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/mult2_to_1_5.v
+!i122 4
+R13
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/mult2_to_1_5.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/mult2_to_1_5.v|
+!i113 1
+R7
+R8
+vprocessor
+R10
+!i10b 1
+!s100 eajbFZK^`l96:D]cCmBYn0
+R1
+IN7AGQ>X?kO8A[i<FCa@@<2
+R2
+R3
+R9
+8C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/processor.v
+FC:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/processor.v
+!i122 6
+L0 1 148
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/processor.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/processor.v|
+!i113 1
+R7
+R8
+vshift
+R10
+!i10b 1
+!s100 XX2;Z1lf9Dd@dcO[G5lL:2
+R1
+IEW[`YS]f<=j9?;KFX6lY=0
+R2
+R3
+R9
+8C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/shift.v
+FC:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/shift.v
+!i122 7
+R4
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/shift.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/shift.v|
+!i113 1
+R7
+R8
+vsignext
+!s110 1623615354
+!i10b 1
+!s100 aj?PFk=ka=A4[;Kz]?d6F3
+R1
+IV5@1<A:Wj5_]H_A^Y0lk^1
+R2
+R3
+R9
+8C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/signext.v
+FC:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/signext.v
+!i122 8
+R4
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/signext.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/signext.v|
+!i113 1
+R7
+R8

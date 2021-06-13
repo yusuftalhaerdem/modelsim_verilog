@@ -1,0 +1,64 @@
+C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/processor.v {1 {vlog -work work -stats=none C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/processor.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module processor
+
+Top level modules:
+	processor
+
+} {} {}} C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/adder.v {1 {vlog -work work -stats=none C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module adder
+
+Top level modules:
+	adder
+
+} {} {}} C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/control.v {1 {vlog -work work -stats=none C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/control.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module control
+
+Top level modules:
+	control
+
+} {} {}} C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/signext.v {1 {vlog -work work -stats=none C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/signext.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module signext
+
+Top level modules:
+	signext
+
+} {} {}} C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/shift.v {1 {vlog -work work -stats=none C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/shift.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shift
+
+Top level modules:
+	shift
+
+} {} {}} C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/mult2_to_1_32.v {1 {vlog -work work -stats=none C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/mult2_to_1_32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mult2_to_1_32
+
+Top level modules:
+	mult2_to_1_32
+
+} {} {}} C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/mult2_to_1_5.v {1 {vlog -work work -stats=none C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/mult2_to_1_5.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mult2_to_1_5
+
+Top level modules:
+	mult2_to_1_5
+
+} {} {}} C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/alucont.v {1 {vlog -work work -stats=none C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/alucont.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module alucont
+
+Top level modules:
+	alucont
+
+} {} {}} C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/alu32.v {1 {vlog -work work -stats=none C:/Users/yusuf/Desktop/comporg_project_2/singlecycleMIPS-lite-commented/alu32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module alu32
+
+Top level modules:
+	alu32
+
+} {} {}}
