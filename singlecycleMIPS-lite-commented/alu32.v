@@ -4,6 +4,7 @@ input [31:0] a,b;
 input [2:0] gin;//ALU control line
 reg [31:0] sum;
 reg [31:0] less;
+reg [31:0] nr;
 output zout;
 reg zout;
 always @(a or b or gin)
@@ -17,6 +18,10 @@ begin
 		  end
 	3'b000: sum=a & b;	//ALU control line=000, AND
 	3'b001: sum=a|b;		//ALU control line=001, OR
+	3'b100: begin nr=(~a)&(~b);
+			sum=nr[4:0];
+			end			//ALU control line=100, NOR
+
 	default: sum=31'bx;	
 	endcase
 zout=~(|sum);
