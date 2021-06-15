@@ -21,6 +21,7 @@ begin
 	3'b100: begin nr=(~a)&(~b);
 			sum=nr[4:0];
 			end			//ALU control line=100, NOR
+	3'b011: sum= b<<a;		//ALU control line=011, SLL
 
 	default: sum=31'bx;	
 	endcase
