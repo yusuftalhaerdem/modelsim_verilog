@@ -10,6 +10,12 @@ if(~(aluop1|aluop0))gout=3'b010;
 if((~aluop1)&aluop0)gout=3'b110;
 if(aluop1&(~aluop0))//R-type
 begin
+
+	// add new control signals are here 
+	//	8		4		2		1
+	//balrz has function code of 22, so probably we need and update here .x
+//	if ( f3&	f2&		f1&		(~f0))gout = b'???
+
 	if (~(f3|f2|f1|f0))gout=3'b010; 	//function code=0000,ALU control=010 (add)
 	if (f1&f3&(~f2)&(~f0))gout=3'b111;			//function code=1010,ALU control=111 (set on less than)
 	if (f1&~(f3)&~(f2)&~(f0))gout=3'b110;		//function code=0010,ALU control=110 (sub)

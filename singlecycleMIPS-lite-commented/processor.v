@@ -38,6 +38,13 @@ reg [31:0] registerfile[0:31];
 
 integer i;
 
+
+// zel 
+wire [31:0] jump32, out5, out13;
+wire jal, jsp, jumpSignal, wDataChange;
+wire [4:0] out15;
+assign wDataChange = jal;
+
 // datamemory connections
 
 always @(posedge clk)
@@ -66,7 +73,7 @@ end
 assign dataa=registerfile[inst25_21];//Read register 1
 assign datab=registerfile[inst20_16];//Read register 2
 always @(posedge clk)
- registerfile[out1]= regwrite ? out3:registerfile[out1];//Write data to register
+ registerfile[out15]= regwrite ? out13:registerfile[out15];//Write data to register
 
 //read data from memory, sum stores address
 assign dpack={datmem[sum[5:0]],datmem[sum[5:0]+1],datmem[sum[5:0]+2],datmem[sum[5:0]+3]};
@@ -86,7 +93,7 @@ mult2_to_1_32 mult4(out4, adder1out,adder2out,pcsrc);
 
 // load pc
 always @(negedge clk)
-pc=out4;
+pc=out5;	//changed by zel
 
 // alu, adder and control logic connections
 
@@ -101,7 +108,8 @@ adder add2(adder1out,sextad,adder2out);
 
 //Control unit
 control cont(instruc[31:26],regdest,alusrc,memtoreg,regwrite,memread,memwrite,branch,
-aluop1,aluop0);
+aluop1,aluop0,
+jal,jsp,jumpSignal);	//added by zel
 
 //Sign extend unit
 signext sext(instruc[15:0],extad);
@@ -114,6 +122,19 @@ shift shift2(sextad,extad);
 
 //AND gate
 assign pcsrc=branch && zout; 
+
+
+
+//added by zel
+jump jumpComponent(jump32,adder1out[31:28],instruc[25:0]);		//creating the 32 bit jump
+mult2_to_1_32 mux13(out5, out4, jump32, jumpSignal);	//last operant before pc change
+mult2_to_1_32 mux14(out13, out3, adder1out, wDataChange);	//last operant before writeData
+mult2_to_1_5 mux15(out15, out1, 5'b11111 , wDataChange);	// changes the address of register to write
+
+
+
+// part appended by zel is finished
+
 
 //initialize datamemory,instruction memory and registers
 //read initial data from files given in hex
