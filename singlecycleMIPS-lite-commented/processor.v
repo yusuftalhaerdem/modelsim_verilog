@@ -12,10 +12,13 @@ sum,		//ALU result
 extad,	//Output of sign-extend unit
 adder1out,	//Output of adder which adds PC and 4-add1
 adder2out,	//Output of adder which adds PC+4 and 2 shifted sign-extend result-add2
-sextad;	//Output of shift left 2 unit
+sextad,	//Output of shift left 2 unit
+new_pc_value,
+data_mem_addr;
 
 wire [5:0] inst31_26;	//31-26 bits of instruction
 wire [4:0] 
+read_reg_1,
 inst25_21,	//25-21 bits of instruction
 inst20_16,	//20-16 bits of instruction
 inst15_11,	//15-11 bits of instruction
@@ -51,11 +54,11 @@ always @(posedge clk)
 //write data to memory
 if (memwrite)
 begin 
-//sum stores address,datab stores the value to be written
-datmem[sum[4:0]+3]=datab[7:0];
-datmem[sum[4:0]+2]=datab[15:8];
-datmem[sum[4:0]+1]=datab[23:16];
-datmem[sum[4:0]]=datab[31:24];
+//data_mem_addr stores address,datab stores the value to be written
+datmem[data_mem_addr[4:0]+3]=datab[7:0];
+datmem[data_mem_addr[4:0]+2]=datab[15:8];
+datmem[data_mem_addr[4:0]+1]=datab[23:16];
+datmem[data_mem_addr[4:0]]=datab[31:24];
 end
 
 //instruction memory
@@ -70,13 +73,14 @@ end
 
 // registers
 
-assign dataa=registerfile[inst25_21];//Read register 1
+assign dataa=registerfile[read_reg_1];//Read register 1
 assign datab=registerfile[inst20_16];//Read register 2
 always @(posedge clk)
  registerfile[out15]= regwrite ? out13:registerfile[out15];//Write data to register
 
 //read data from memory, sum stores address
-assign dpack={datmem[sum[5:0]],datmem[sum[5:0]+1],datmem[sum[5:0]+2],datmem[sum[5:0]+3]};
+assign dpack={	datmem[data_mem_addr[5:0]],datmem[data_mem_addr[5:0]+1],
+				datmem[data_mem_addr[5:0]+2],datmem[data_mem_addr[5:0]+3]};
 
 //multiplexers
 //mux with RegDst control
@@ -93,7 +97,7 @@ mult2_to_1_32 mult4(out4, adder1out,adder2out,pcsrc);
 
 // load pc
 always @(negedge clk)
-pc=out5;	//changed by zel
+pc=new_pc_value;	//changed by zel
 
 // alu, adder and control logic connections
 
@@ -126,12 +130,16 @@ assign pcsrc=branch && zout;
 
 
 //added by zel
+//jal
 jump jumpComponent(jump32,adder1out[31:28],instruc[25:0]);		//creating the 32 bit jump
 mult2_to_1_32 mux13(out5, out4, jump32, jumpSignal);	//last operant before pc change
 mult2_to_1_32 mux14(out13, out3, adder1out, wDataChange);	//last operant before writeData
 mult2_to_1_5 mux15(out15, out1, 5'b11111 , wDataChange);	// changes the address of register to write
 
-
+//jsp
+mult2_to_1_5 mux16(read_reg_1, inst25_21, 5'b11100,jsp);	// changes read_reg_1 to 28 according to jsp
+mult2_to_1_32 mux17(data_mem_addr, sum, dataa, jsp);	// changes readData according to jsp
+mult2_to_1_32 mux18(new_pc_value, out5, dpack, jsp);	// changes pc value in next clock according to jsp
 
 // part appended by zel is finished
 
