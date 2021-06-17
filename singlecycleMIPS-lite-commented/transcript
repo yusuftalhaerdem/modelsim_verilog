@@ -1,16 +1,13 @@
-# Compile of adder.v was successful.
-# Compile of alu32.v was successful.
-# Compile of alucont.v was successful.
+# Compile of control.v failed with 1 errors.
 # Compile of control.v was successful.
-# Compile of mult2_to_1_5.v was successful.
-# Compile of mult2_to_1_32.v was successful.
-# Compile of processor.v was successful.
-# Compile of shift.v was successful.
 # Compile of signext.v was successful.
-# 9 compiles, 0 failed with no errors.
+# Compile of control.v was successful.
+# Compile of processor.v was successful.
+# Compile of alucont.v was successful.
+# Compile of processor.v was successful.
 vsim -gui work.adder work.alu32 work.alucont work.control work.mult2_to_1_32 work.mult2_to_1_5 work.processor work.shift work.signext
 # vsim -gui work.adder work.alu32 work.alucont work.control work.mult2_to_1_32 work.mult2_to_1_5 work.processor work.shift work.signext 
-# Start time: 23:16:02 on Jun 13,2021
+# Start time: 14:33:05 on Jun 14,2021
 # Loading work.adder
 # Loading work.alu32
 # Loading work.alucont
@@ -21,7 +18,7 @@ vsim -gui work.adder work.alu32 work.alucont work.control work.mult2_to_1_32 wor
 # Loading work.signext
 # Loading work.shift
 add wave  \
-sim:/processor/clk \
+sim:/processor/pc \
 sim:/processor/datmem \
 sim:/processor/mem \
 sim:/processor/dataa \
@@ -39,29 +36,37 @@ run
 # Instruction Memory[7]= 22  Data Memory[7]= 05   Register[7]= 00000042
 # Instruction Memory[8]= 8c  Data Memory[8]= 00   Register[8]= 00000014
 # Instruction Memory[9]= 24  Data Memory[9]= 00   Register[9]= 00000028
-# Instruction Memory[10]= 00  Data Memory[10]= 00   Register[10]= xxxxxxxx
-# Instruction Memory[11]= 00  Data Memory[11]= 10   Register[11]= xxxxxxxx
-# Instruction Memory[12]= ac  Data Memory[12]= 00   Register[12]= xxxxxxxx
-# Instruction Memory[13]= 24  Data Memory[13]= 00   Register[13]= xxxxxxxx
-# Instruction Memory[14]= 00  Data Memory[14]= 01   Register[14]= xxxxxxxx
-# Instruction Memory[15]= 04  Data Memory[15]= 00   Register[15]= xxxxxxxx
-# Instruction Memory[16]= 10  Data Memory[16]= 00   Register[16]= xxxxxxxx
-# Instruction Memory[17]= 63  Data Memory[17]= 00   Register[17]= xxxxxxxx
-# Instruction Memory[18]= ff  Data Memory[18]= 01   Register[18]= xxxxxxxx
-# Instruction Memory[19]= fb  Data Memory[19]= 10   Register[19]= xxxxxxxx
-# Instruction Memory[20]= 00  Data Memory[20]= 00   Register[20]= xxxxxxxx
-# Instruction Memory[21]= 00  Data Memory[21]= 00   Register[21]= xxxxxxxx
-# Instruction Memory[22]= 00  Data Memory[22]= 00   Register[22]= xxxxxxxx
-# Instruction Memory[23]= 00  Data Memory[23]= 25   Register[23]= xxxxxxxx
-# Instruction Memory[24]= 22  Data Memory[24]= 00   Register[24]= xxxxxxxx
-# Instruction Memory[25]= 00  Data Memory[25]= 00   Register[25]= xxxxxxxx
-# Instruction Memory[26]= 00  Data Memory[26]= 01   Register[26]= xxxxxxxx
-# Instruction Memory[27]= 00  Data Memory[27]= 24   Register[27]= xxxxxxxx
-# Instruction Memory[28]= 00  Data Memory[28]= xx   Register[28]= xxxxxxxx
-# Instruction Memory[29]= xx  Data Memory[29]= xx   Register[29]= xxxxxxxx
-# Instruction Memory[30]= xx  Data Memory[30]= xx   Register[30]= xxxxxxxx
+# Instruction Memory[10]= 00  Data Memory[10]= 00   Register[10]= 00000010
+# Instruction Memory[11]= 00  Data Memory[11]= 10   Register[11]= 00000011
+# Instruction Memory[12]= ac  Data Memory[12]= 00   Register[12]= 00000012
+# Instruction Memory[13]= 24  Data Memory[13]= 00   Register[13]= 00000013
+# Instruction Memory[14]= 00  Data Memory[14]= 01   Register[14]= 00000014
+# Instruction Memory[15]= 04  Data Memory[15]= 00   Register[15]= 00000015
+# Instruction Memory[16]= 10  Data Memory[16]= 00   Register[16]= 00000016
+# Instruction Memory[17]= 63  Data Memory[17]= 00   Register[17]= 00000017
+# Instruction Memory[18]= ff  Data Memory[18]= 01   Register[18]= 00000018
+# Instruction Memory[19]= fb  Data Memory[19]= 10   Register[19]= 00000019
+# Instruction Memory[20]= 00  Data Memory[20]= 00   Register[20]= 00000020
+# Instruction Memory[21]= 00  Data Memory[21]= 00   Register[21]= 00000021
+# Instruction Memory[22]= 00  Data Memory[22]= 00   Register[22]= 00000022
+# Instruction Memory[23]= 00  Data Memory[23]= 25   Register[23]= 00000023
+# Instruction Memory[24]= 22  Data Memory[24]= 00   Register[24]= 00000024
+# Instruction Memory[25]= 00  Data Memory[25]= 00   Register[25]= 00000025
+# Instruction Memory[26]= 00  Data Memory[26]= 01   Register[26]= 00000026
+# Instruction Memory[27]= 00  Data Memory[27]= 24   Register[27]= 00000027
+# Instruction Memory[28]= 00  Data Memory[28]= xx   Register[28]= 00000028
+# Instruction Memory[29]= xx  Data Memory[29]= xx   Register[29]= 00000029
+# Instruction Memory[30]= xx  Data Memory[30]= xx   Register[30]= 00000030
 #                    0PC 00000004  SUM ffffffd0   INST 00a33022   REGISTER 00000010 00000030 00000032 00000014 
 run
 #                   20PC 00000004  SUM ffffffd0   INST 00a33022   REGISTER 00000010 00000030 ffffffd0 00000014 
-# End time: 23:18:31 on Jun 13,2021, Elapsed time: 0:02:29
-# Errors: 0, Warnings: 5
+run
+#                   40PC 00000008  SUM 00000014   INST 8c240000   REGISTER 00000010 00000030 ffffffd0 00000014 
+run
+#                   60PC 00000008  SUM 00000014   INST 8c240000   REGISTER 00000025 00000030 ffffffd0 00000014 
+run
+#                   80PC 0000000c  SUM 00000018   INST ac240004   REGISTER 00000025 00000030 ffffffd0 00000014 
+add wave -position insertpoint  \
+sim:/processor/sum
+# Break key hit
+run
