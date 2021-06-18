@@ -43,8 +43,8 @@ integer i;
 
 
 // zel 
-wire [31:0] jump32, out5, out13;
-wire jal, jsp, jumpSignal, wDataChange;
+wire [31:0] jump32, out5, out13, writeData, out16;
+wire jal, jsp, jumpSignal, wDataChange, balrz;
 wire [4:0] out15;
 assign wDataChange = jal;
 
@@ -76,7 +76,7 @@ end
 assign dataa=registerfile[read_reg_1];//Read register 1
 assign datab=registerfile[inst20_16];//Read register 2
 always @(posedge clk)
- registerfile[out15]= regwrite ? out13:registerfile[out15];//Write data to register
+ registerfile[out15]= regwrite ? writeData:registerfile[out15];//Write data to register
 
 //read data from memory, sum stores address
 assign dpack={	datmem[data_mem_addr[5:0]],datmem[data_mem_addr[5:0]+1],
@@ -113,19 +113,20 @@ adder add2(adder1out,sextad,adder2out);
 //Control unit
 control cont(instruc[31:26],regdest,alusrc,memtoreg,regwrite,memread,memwrite,branch,
 aluop1,aluop0,
-jal,jsp,jumpSignal);	//added by zel
+jal,jsp,jumpSignal,bgtz);	//added by zel
 
 //Sign extend unit
 signext sext(instruc[15:0],extad);
 
 //ALU control unit
-alucont acont(aluop1,aluop0,instruc[3],instruc[2], instruc[1], instruc[0] ,gout);
+alucont acont(aluop1,aluop0,instruc[3],instruc[2], instruc[1], instruc[0] ,gout, balrz);
 
 //Shift-left 2 unit
 shift shift2(sextad,extad);
 
 //AND gate
-assign pcsrc=branch && zout; 
+assign pcsrc=(branch && zout)
+ || ((~(dataa[31:30])) && (~zout) && bgtz); // added by zel
 
 
 
@@ -134,12 +135,21 @@ assign pcsrc=branch && zout;
 jump jumpComponent(jump32,adder1out[31:28],instruc[25:0]);		//creating the 32 bit jump
 mult2_to_1_32 mux13(out5, out4, jump32, jumpSignal);	//last operant before pc change
 mult2_to_1_32 mux14(out13, out3, adder1out, wDataChange);	//last operant before writeData
-mult2_to_1_5 mux15(out15, out1, 5'b11111 , wDataChange);	// changes the address of register to write
+mult2_to_1_5 mux15(out15, out1, 5'b11111 , wDataChange|balrz);	// changes the address of register to write
 
 //jsp
 mult2_to_1_5 mux16(read_reg_1, inst25_21, 5'b11100,jsp);	// changes read_reg_1 to 28 according to jsp
 mult2_to_1_32 mux17(data_mem_addr, sum, dataa, jsp);	// changes readData according to jsp
-mult2_to_1_32 mux18(new_pc_value, out5, dpack, jsp);	// changes pc value in next clock according to jsp
+mult2_to_1_32 mux18(out16, out5, dpack, jsp);	// changes pc value in next clock according to jsp
+
+//balrz		// i have failed that
+mult2_to_1_32 muxWdata(writeData, adder1out, out13, balrz);
+assign regwrite = regwrite | balrz;
+mult2_to_1_32 mux19(new_pc_value, out16, dataa, balrz);
+
+//bgtz		bgtz
+
+
 
 // part appended by zel is finished
 

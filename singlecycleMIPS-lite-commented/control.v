@@ -1,6 +1,6 @@
-module control(in,regdest,alusrc,memtoreg,regwrite,memread,memwrite,branch,aluop1,aluop2,jal,jsp,jump);
+module control(in,regdest,alusrc,memtoreg,regwrite,memread,memwrite,branch,aluop1,aluop2,jal,jsp,jump,bgtz);
 input [5:0] in;
-output regdest,alusrc,memtoreg,regwrite,memread,memwrite,branch,aluop1,aluop2,jal,jsp,jump;
+output regdest,alusrc,memtoreg,regwrite,memread,memwrite,branch,aluop1,aluop2,jal,jsp,jump,bgtz;
 wire rformat,lw,sw,beq,nori;
 
 assign rformat=~|in;
@@ -12,6 +12,7 @@ assign sllv= (~in[5])&(~in[4])&(~in[3])&in[2]&(~in[1])&(~in[0]); //opcode=4, in 
 
 assign jal= (~in[5])& 	(~in[4])& 	(~in[3])&	(~in[2])& 	in[1]& 		in[0];
 assign jsp= (~in[5])& 	in[4]& 		(~in[3])& 	(~in[2])& 	in[1]& 		(~in[0]);
+assign bgtz= in[5]& 	(~in[4])&	(~in[3])&	in[2]&in[1]&(~in[0]);//opcode=38, 100110
 
 assign jump= jal|jsp;
 
