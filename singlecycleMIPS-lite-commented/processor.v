@@ -44,8 +44,9 @@ integer i;
 
 // zel 
 wire [31:0] jump32, out5, out13, writeData, out16;
-wire jal, jsp, jumpSignal, wDataChange, balrz;
+wire jal, jsp, jumpSignal, wDataChange, balrz, writeReg;
 wire [4:0] out15;
+reg zero;
 assign wDataChange = jal;
 
 // datamemory connections
@@ -102,7 +103,7 @@ pc=new_pc_value;	//changed by zel
 // alu, adder and control logic connections
 
 //ALU unit
-alu32 alu1(sum,dataa,out2,zout,gout);
+alu32 alu1(sum,dataa,out2,zout,gout,zero);
 
 //adder which adds PC and 4
 adder add1(pc,32'h4,adder1out);
@@ -111,7 +112,7 @@ adder add1(pc,32'h4,adder1out);
 adder add2(adder1out,sextad,adder2out);
 
 //Control unit
-control cont(instruc[31:26],regdest,alusrc,memtoreg,regwrite,memread,memwrite,branch,
+control cont(instruc[31:26],regdest,alusrc,memtoreg,writeReg,memread,memwrite,branch,
 aluop1,aluop0,
 jal,jsp,jumpSignal,bgtz);	//added by zel
 
@@ -143,9 +144,10 @@ mult2_to_1_32 mux17(data_mem_addr, sum, dataa, jsp);	// changes readData accordi
 mult2_to_1_32 mux18(out16, out5, dpack, jsp);	// changes pc value in next clock according to jsp
 
 //balrz		// i have failed that
-mult2_to_1_32 muxWdata(writeData, adder1out, out13, balrz);
-assign regwrite = regwrite | balrz;
-mult2_to_1_32 mux19(new_pc_value, out16, dataa, balrz);
+mult2_to_1_32 muxWdata(writeData, adder1out, out13, balrz);		//writedata added according to take value of pc+4
+assign regwrite = writeReg | balrz;								// regwrite signal so we 
+mult2_to_1_32 mux19(new_pc_value, out16, dataa, (balrz&&zero));			// last mux before pc new
+
 
 //bgtz		bgtz
 

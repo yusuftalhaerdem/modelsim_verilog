@@ -97,3 +97,58 @@
 # Compile of shift.v was successful.
 # Compile of signext.v was successful.
 # 10 compiles, 0 failed with no errors.
+# Compile of adder.v was successful.
+# Compile of alu32.v failed with 1 errors.
+# Compile of alucont.v was successful.
+# Compile of control.v was successful.
+# Compile of jump.v was successful.
+# Compile of mult2_to_1_5.v was successful.
+# Compile of mult2_to_1_32.v was successful.
+# Compile of processor.v was successful.
+# Compile of shift.v was successful.
+# Compile of signext.v was successful.
+# 10 compiles, 1 failed with 1 error.
+# Compile of adder.v was successful.
+# Compile of alu32.v was successful.
+# Compile of alucont.v was successful.
+# Compile of control.v was successful.
+# Compile of jump.v was successful.
+# Compile of mult2_to_1_5.v was successful.
+# Compile of mult2_to_1_32.v was successful.
+# Compile of processor.v was successful.
+# Compile of shift.v was successful.
+# Compile of signext.v was successful.
+# 10 compiles, 0 failed with no errors.
+# Compile of adder.v was successful.
+# Compile of alu32.v failed with 2 errors.
+# Compile of alucont.v was successful.
+# Compile of control.v was successful.
+# Compile of jump.v was successful.
+# Compile of mult2_to_1_5.v was successful.
+# Compile of mult2_to_1_32.v was successful.
+# Compile of processor.v was successful.
+# Compile of shift.v was successful.
+# Compile of signext.v was successful.
+# 10 compiles, 1 failed with 2 errors.
+# Compile of adder.v was successful.
+# Compile of alu32.v failed with 1 errors.
+# Compile of alucont.v was successful.
+# Compile of control.v was successful.
+# Compile of jump.v was successful.
+# Compile of mult2_to_1_5.v was successful.
+# Compile of mult2_to_1_32.v was successful.
+# Compile of processor.v was successful.
+# Compile of shift.v was successful.
+# Compile of signext.v was successful.
+# 10 compiles, 1 failed with 1 error.
+# Compile of adder.v was successful.
+# Compile of alu32.v was successful.
+# Compile of alucont.v was successful.
+# Compile of control.v was successful.
+# Compile of jump.v was successful.
+# Compile of mult2_to_1_5.v was successful.
+# Compile of mult2_to_1_32.v was successful.
+# Compile of processor.v was successful.
+# Compile of shift.v was successful.
+# Compile of signext.v was successful.
+# 10 compiles, 0 failed with no errors.

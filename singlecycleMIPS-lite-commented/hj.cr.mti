@@ -1,11 +1,4 @@
-C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/alu32.v {1 {vlog -work work -stats=none C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/alu32.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module alu32
-
-Top level modules:
-	alu32
-
-} {} {}} C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v {1 {vlog -work work -stats=none C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v
+C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v {1 {vlog -work work -stats=none C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module processor
 
@@ -32,6 +25,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	control
+
+} {} {}} C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/alucont.v {1 {vlog -work work -stats=none C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/alucont.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module alucont
+
+Top level modules:
+	alucont
 
 } {} {}} C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/signext.v {1 {vlog -work work -stats=none C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/signext.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

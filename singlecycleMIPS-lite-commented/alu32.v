@@ -1,4 +1,4 @@
-module alu32(sum,a,b,zout,gin);//ALU operation according to the ALU control line values
+module alu32(sum,a,b,zout,gin,zero);//ALU operation according to the ALU control line values
 output [31:0] sum;
 input [31:0] a,b; 
 input [2:0] gin;//ALU control line
@@ -6,6 +6,7 @@ reg [31:0] sum;
 reg [31:0] less;
 reg [31:0] nr;
 output zout;
+output reg zero;
 reg zout;
 always @(a or b or gin)
 begin
@@ -26,5 +27,6 @@ begin
 	default: sum=31'bx;	
 	endcase
 zout=~(|sum);
+zero= zout;
 end
 endmodule
