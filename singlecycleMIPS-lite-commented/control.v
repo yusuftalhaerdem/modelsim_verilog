@@ -1,4 +1,4 @@
-module control(in,regdest,alusrc,memtoreg,regwrite,memread,memwrite,branch,aluop1,aluop2);
+module control(in,regdest,alusrc,memtoreg,regwrite,memread,memwrite,branch,aluop1,aluop2,jal,jsp,jump);
 input [5:0] in;
 output regdest,alusrc,memtoreg,regwrite,memread,memwrite,branch,aluop1,aluop2,jal,jsp,jump;
 wire rformat,lw,sw,beq,nori;
