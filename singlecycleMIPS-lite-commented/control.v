@@ -6,7 +6,7 @@ wire rformat,lw,sw,beq,nori;
 assign rformat=~|in;
 assign lw=in[5]& (~in[4])&(~in[3])&(~in[2])&in[1]&in[0];
 assign sw=in[5]& (~in[4])&in[3]&(~in[2])&in[1]&in[0];
-assign beq=~in[5]& (~in[4])&(~in[3])&in[2]&(~in[1])&(~in[0]);	//opcode=4, 000100
+assign beq=(~in[5])& (~in[4])&(~in[3])&in[2]&(~in[1])&(~in[0]);	//opcode=36, 000100
 assign nori=(~in[5])& (~in[4])&in[3]&in[2]&(~in[1])&in[0];	//opcode=13, in binary=001101
 assign sllv= (~in[5])&(~in[4])&(~in[3])&in[2]&(~in[1])&(~in[0]); //opcode=4, in binary=000100
 

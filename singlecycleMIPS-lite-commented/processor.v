@@ -46,7 +46,7 @@ integer i;
 wire [31:0] jump32, out5, out13, writeData, out16;
 wire jal, jsp, jumpSignal, wDataChange, balrz, writeReg;
 wire [4:0] out15;
-reg zero;
+wire zero;
 assign wDataChange = jal;
 
 // datamemory connections

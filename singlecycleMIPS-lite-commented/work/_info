@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented
 vadder
-Z1 !s110 1624057769
+Z1 !s110 1624121508
 !i10b 1
 !s100 gWb<;Y:[8c^V3JALeYLDZ1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ R0
 w1623615246
 8C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/adder.v
 FC:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/adder.v
-!i122 132
+!i122 152
 Z4 L0 1 5
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1624057769.000000
+Z6 !s108 1624121508.000000
 !s107 C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/adder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/adder.v|
 !i113 1
@@ -43,7 +43,7 @@ R0
 w1624057766
 8C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/alu32.v
 FC:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/alu32.v
-!i122 133
+!i122 153
 L0 1 32
 R5
 r1
@@ -66,7 +66,7 @@ R0
 w1624056638
 8C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/alucont.v
 FC:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/alucont.v
-!i122 134
+!i122 154
 L0 1 30
 R5
 r1
@@ -79,30 +79,30 @@ R6
 R7
 R8
 vcontrol
-Z9 !s110 1624057770
+R1
 !i10b 1
-!s100 nEK1Ii7delD4<O37BRlh?2
+!s100 kdDecLJGSZaK5TFkfhgEL2
 R2
-IlNakX78EnVCH<2OE1S^nJ3
+IcNPnW1eKE`3Q1]J6lXhC33
 R3
 R0
-w1624054056
+w1624110739
 8C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/control.v
 FC:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/control.v
-!i122 135
+!i122 155
 L0 1 29
 R5
 r1
 !s85 0
 31
-Z10 !s108 1624057770.000000
+R6
 !s107 C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/control.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/control.v|
 !i113 1
 R7
 R8
 vjump
-R9
+Z9 !s110 1624121509
 !i10b 1
 !s100 KoSn<3V=VQVF?Yb28<Hdn0
 R2
@@ -112,13 +112,13 @@ R0
 w1623772578
 8C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/jump.v
 FC:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/jump.v
-!i122 136
+!i122 156
 L0 1 10
 R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/jump.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/jump.v|
 !i113 1
@@ -132,16 +132,16 @@ R2
 IYAZeU6b9o27`V87^KZJnd3
 R3
 R0
-Z11 w1623615247
+Z10 w1623615247
 8C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/mult2_to_1_32.v
 FC:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/mult2_to_1_32.v
-!i122 138
-Z12 L0 1 6
+!i122 158
+Z11 L0 1 6
 R5
 r1
 !s85 0
 31
-R10
+Z12 !s108 1624121509.000000
 !s107 C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/mult2_to_1_32.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/mult2_to_1_32.v|
 !i113 1
@@ -155,16 +155,16 @@ R2
 I@MdQM^ANMG54l8QbzQ[<i2
 R3
 R0
-R11
+R10
 8C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/mult2_to_1_5.v
 FC:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/mult2_to_1_5.v
-!i122 137
-R12
+!i122 157
+R11
 R5
 r1
 !s85 0
 31
-R10
+R12
 !s107 C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/mult2_to_1_5.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/mult2_to_1_5.v|
 !i113 1
@@ -173,67 +173,67 @@ R8
 vprocessor
 R9
 !i10b 1
-!s100 BOz46A4a=ohih2@^0Ji^;1
+!s100 _bRZXj8T9d2Le=X<DmQKk1
 R2
-IcWTPZlD@eRTAL9EF;LZC:3
+I9j2oMWW6a`m@ll:biM;if2
 R3
 R0
-w1624057599
+w1624121505
 8C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v
 FC:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v
-!i122 139
+!i122 159
 L0 1 189
 R5
 r1
 !s85 0
 31
-R10
+R12
 !s107 C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v|
 !i113 1
 R7
 R8
 vshift
-Z13 !s110 1624057771
+R9
 !i10b 1
 !s100 XX2;Z1lf9Dd@dcO[G5lL:2
 R2
 ICaOo<e0V:EW;fJeZ`eO_^0
 R3
 R0
-R11
+R10
 8C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/shift.v
 FC:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/shift.v
-!i122 140
+!i122 160
 R4
 R5
 r1
 !s85 0
 31
-R10
+R12
 !s107 C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/shift.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/shift.v|
 !i113 1
 R7
 R8
 vsignext
-R13
+!s110 1624121510
 !i10b 1
 !s100 aj?PFk=ka=A4[;Kz]?d6F3
 R2
 IEfeCDRH9n]>8292W7`cTN2
 R3
 R0
-R11
+R10
 8C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/signext.v
 FC:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/signext.v
-!i122 141
+!i122 161
 R4
 R5
 r1
 !s85 0
 31
-!s108 1624057771.000000
+!s108 1624121510.000000
 !s107 C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/signext.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/signext.v|
 !i113 1

@@ -1,72 +1,210 @@
-# Compile of control.v failed with 1 errors.
-# Compile of control.v was successful.
-# Compile of signext.v was successful.
-# Compile of control.v was successful.
-# Compile of processor.v was successful.
+# Compile of adder.v was successful.
+# Compile of alu32.v was successful.
 # Compile of alucont.v was successful.
+# Compile of control.v was successful.
+# Compile of jump.v was successful.
+# Compile of mult2_to_1_5.v was successful.
+# Compile of mult2_to_1_32.v was successful.
 # Compile of processor.v was successful.
-vsim -gui work.adder work.alu32 work.alucont work.control work.mult2_to_1_32 work.mult2_to_1_5 work.processor work.shift work.signext
-# vsim -gui work.adder work.alu32 work.alucont work.control work.mult2_to_1_32 work.mult2_to_1_5 work.processor work.shift work.signext 
-# Start time: 14:33:05 on Jun 14,2021
-# Loading work.adder
-# Loading work.alu32
-# Loading work.alucont
-# Loading work.control
-# Loading work.mult2_to_1_32
-# Loading work.mult2_to_1_5
+# Compile of shift.v was successful.
+# Compile of signext.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.processor
+# vsim -gui work.processor 
+# Start time: 19:50:56 on Jun 19,2021
 # Loading work.processor
+# Loading work.mult2_to_1_5
+# Loading work.mult2_to_1_32
+# Loading work.alu32
+# Loading work.adder
+# Loading work.control
 # Loading work.signext
+# Loading work.alucont
 # Loading work.shift
-add wave  \
+# Loading work.jump
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'zero'.
+#    Time: 0 ps  Iteration: 0  Instance: /processor/alu1 File: C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v Line: 106
+# Error loading design
+# End time: 19:50:57 on Jun 19,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+vsim -gui work.processor
+# vsim -gui work.processor 
+# Start time: 19:51:09 on Jun 19,2021
+# Loading work.processor
+# Loading work.mult2_to_1_5
+# Loading work.mult2_to_1_32
+# Loading work.alu32
+# Loading work.adder
+# Loading work.control
+# Loading work.signext
+# Loading work.alucont
+# Loading work.shift
+# Loading work.jump
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'zero'.
+#    Time: 0 ps  Iteration: 0  Instance: /processor/alu1 File: C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v Line: 106
+# Error loading design
+# End time: 19:51:09 on Jun 19,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# Compile of adder.v was successful.
+# Compile of alu32.v was successful.
+# Compile of alucont.v was successful.
+# Compile of control.v was successful.
+# Compile of jump.v was successful.
+# Compile of mult2_to_1_5.v was successful.
+# Compile of mult2_to_1_32.v was successful.
+# Compile of processor.v was successful.
+# Compile of shift.v was successful.
+# Compile of signext.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.processor
+# vsim -gui work.processor 
+# Start time: 19:51:56 on Jun 19,2021
+# Loading work.processor
+# Loading work.mult2_to_1_5
+# Loading work.mult2_to_1_32
+# Loading work.alu32
+# Loading work.adder
+# Loading work.control
+# Loading work.signext
+# Loading work.alucont
+# Loading work.shift
+# Loading work.jump
+add wave -position insertpoint  \
 sim:/processor/pc \
+sim:/processor/clk \
 sim:/processor/datmem \
 sim:/processor/mem \
 sim:/processor/dataa \
 sim:/processor/datab \
+sim:/processor/out2 \
+sim:/processor/out3 \
+sim:/processor/out4 \
+sim:/processor/sum \
+sim:/processor/extad \
+sim:/processor/adder1out \
+sim:/processor/adder2out \
+sim:/processor/sextad \
+sim:/processor/new_pc_value \
+sim:/processor/data_mem_addr \
+sim:/processor/inst31_26 \
+sim:/processor/read_reg_1 \
+sim:/processor/inst25_21 \
+sim:/processor/inst20_16 \
+sim:/processor/inst15_11 \
+sim:/processor/out1 \
+sim:/processor/inst15_0 \
 sim:/processor/instruc \
-sim:/processor/registerfile
+sim:/processor/dpack \
+sim:/processor/gout \
+sim:/processor/zout \
+sim:/processor/pcsrc \
+sim:/processor/regdest \
+sim:/processor/alusrc \
+sim:/processor/memtoreg \
+sim:/processor/regwrite \
+sim:/processor/memread \
+sim:/processor/memwrite \
+sim:/processor/branch \
+sim:/processor/aluop1 \
+sim:/processor/aluop0 \
+sim:/processor/registerfile \
+sim:/processor/i \
+sim:/processor/jump32 \
+sim:/processor/out5 \
+sim:/processor/out13 \
+sim:/processor/writeData \
+sim:/processor/out16 \
+sim:/processor/jal \
+sim:/processor/jsp \
+sim:/processor/jumpSignal \
+sim:/processor/wDataChange \
+sim:/processor/balrz \
+sim:/processor/writeReg \
+sim:/processor/out15 \
+sim:/processor/zero \
+sim:/processor/bgtz
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yusuf  Hostname: DESKTOP-7HT3QCT  ProcessID: 5196
+#           Attempting to use alternate WLF file "./wlftwv8ir1".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftwv8ir1
 run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 34 of file "initDm.dat". (Current address [32], address range [0:31])    : C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v(163)
+#    Time: 0 ps  Iteration: 0  Instance: /processor
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 34 of file "initIM.dat". (Current address [32], address range [0:31])    : C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v(164)
+#    Time: 0 ps  Iteration: 0  Instance: /processor
 # Instruction Memory[0]= 00  Data Memory[0]= 00   Register[0]= 00000000
 # Instruction Memory[1]= 43  Data Memory[1]= 00   Register[1]= 00000014
 # Instruction Memory[2]= 28  Data Memory[2]= 00   Register[2]= 00000040
 # Instruction Memory[3]= 20  Data Memory[3]= 01   Register[3]= 00000060
-# Instruction Memory[4]= 00  Data Memory[4]= 00   Register[4]= 00000010
-# Instruction Memory[5]= a3  Data Memory[5]= 00   Register[5]= 00000030
-# Instruction Memory[6]= 30  Data Memory[6]= 00   Register[6]= 00000032
-# Instruction Memory[7]= 22  Data Memory[7]= 05   Register[7]= 00000042
-# Instruction Memory[8]= 8c  Data Memory[8]= 00   Register[8]= 00000014
-# Instruction Memory[9]= 24  Data Memory[9]= 00   Register[9]= 00000028
+# Instruction Memory[4]= 48  Data Memory[4]= 00   Register[4]= 00000010
+# Instruction Memory[5]= 00  Data Memory[5]= 00   Register[5]= 00000030
+# Instruction Memory[6]= 00  Data Memory[6]= 00   Register[6]= 00000032
+# Instruction Memory[7]= 00  Data Memory[7]= 05   Register[7]= 00000042
+# Instruction Memory[8]= 0c  Data Memory[8]= 00   Register[8]= 00000014
+# Instruction Memory[9]= 00  Data Memory[9]= 00   Register[9]= 00000028
 # Instruction Memory[10]= 00  Data Memory[10]= 00   Register[10]= 00000010
-# Instruction Memory[11]= 00  Data Memory[11]= 10   Register[11]= 00000011
-# Instruction Memory[12]= ac  Data Memory[12]= 00   Register[12]= 00000012
-# Instruction Memory[13]= 24  Data Memory[13]= 00   Register[13]= 00000013
-# Instruction Memory[14]= 00  Data Memory[14]= 01   Register[14]= 00000014
-# Instruction Memory[15]= 04  Data Memory[15]= 00   Register[15]= 00000015
-# Instruction Memory[16]= 10  Data Memory[16]= 00   Register[16]= 00000016
-# Instruction Memory[17]= 63  Data Memory[17]= 00   Register[17]= 00000017
-# Instruction Memory[18]= ff  Data Memory[18]= 01   Register[18]= 00000018
-# Instruction Memory[19]= fb  Data Memory[19]= 10   Register[19]= 00000019
-# Instruction Memory[20]= 00  Data Memory[20]= 00   Register[20]= 00000020
-# Instruction Memory[21]= 00  Data Memory[21]= 00   Register[21]= 00000021
+# Instruction Memory[11]= 14  Data Memory[11]= 10   Register[11]= 00000011
+# Instruction Memory[12]= 00  Data Memory[12]= 00   Register[12]= 00000012
+# Instruction Memory[13]= a3  Data Memory[13]= 00   Register[13]= 00000013
+# Instruction Memory[14]= 30  Data Memory[14]= 00   Register[14]= 00000014
+# Instruction Memory[15]= 22  Data Memory[15]= 0c   Register[15]= 00000015
+# Instruction Memory[16]= 8c  Data Memory[16]= 00   Register[16]= 00000016
+# Instruction Memory[17]= 24  Data Memory[17]= 00   Register[17]= 00000017
+# Instruction Memory[18]= 00  Data Memory[18]= 00   Register[18]= 00000018
+# Instruction Memory[19]= 00  Data Memory[19]= 01   Register[19]= 00000019
+# Instruction Memory[20]= ac  Data Memory[20]= 10   Register[20]= 00000020
+# Instruction Memory[21]= 24  Data Memory[21]= 00   Register[21]= 00000021
 # Instruction Memory[22]= 00  Data Memory[22]= 00   Register[22]= 00000022
-# Instruction Memory[23]= 00  Data Memory[23]= 25   Register[23]= 00000023
-# Instruction Memory[24]= 22  Data Memory[24]= 00   Register[24]= 00000024
-# Instruction Memory[25]= 00  Data Memory[25]= 00   Register[25]= 00000025
-# Instruction Memory[26]= 00  Data Memory[26]= 01   Register[26]= 00000026
-# Instruction Memory[27]= 00  Data Memory[27]= 24   Register[27]= 00000027
-# Instruction Memory[28]= 00  Data Memory[28]= xx   Register[28]= 00000028
-# Instruction Memory[29]= xx  Data Memory[29]= xx   Register[29]= 00000029
-# Instruction Memory[30]= xx  Data Memory[30]= xx   Register[30]= 00000030
-#                    0PC 00000004  SUM ffffffd0   INST 00a33022   REGISTER 00000010 00000030 00000032 00000014 
+# Instruction Memory[23]= 04  Data Memory[23]= 00   Register[23]= 00000023
+# Instruction Memory[24]= 10  Data Memory[24]= 25   Register[24]= 00000024
+# Instruction Memory[25]= 63  Data Memory[25]= 00   Register[25]= 00000025
+# Instruction Memory[26]= ff  Data Memory[26]= 00   Register[26]= 00000026
+# Instruction Memory[27]= fb  Data Memory[27]= 01   Register[27]= 00000027
+# Instruction Memory[28]= 00  Data Memory[28]= 24   Register[28]= 0000000c
+# Instruction Memory[29]= 00  Data Memory[29]= 00   Register[29]= 00000029
+# Instruction Memory[30]= 00  Data Memory[30]= 00   Register[30]= 00000030
+#                    0PC 000000XX  SUM xxxxxxxx   INST xxxxxxxx   REGISTER 00000010 00000030 00000032 00000014 
+#                   40PC xxxxxxxx  SUM xxxxxxxx   INST xxxxxxxx   REGISTER 00000010 00000030 00000032 00000014 
 run
-#                   20PC 00000004  SUM ffffffd0   INST 00a33022   REGISTER 00000010 00000030 ffffffd0 00000014 
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 run
-#                   40PC 00000008  SUM 00000014   INST 8c240000   REGISTER 00000010 00000030 ffffffd0 00000014 
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 34 of file "initDm.dat". (Current address [32], address range [0:31])    : C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v(163)
+#    Time: 0 ps  Iteration: 0  Instance: /processor
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 34 of file "initIM.dat". (Current address [32], address range [0:31])    : C:/Users/yusuf/Documents/GitHub/modelsim_verilog/singlecycleMIPS-lite-commented/processor.v(164)
+#    Time: 0 ps  Iteration: 0  Instance: /processor
+# Instruction Memory[0]= 00  Data Memory[0]= 00   Register[0]= 00000000
+# Instruction Memory[1]= 43  Data Memory[1]= 00   Register[1]= 00000014
+# Instruction Memory[2]= 28  Data Memory[2]= 00   Register[2]= 00000040
+# Instruction Memory[3]= 20  Data Memory[3]= 01   Register[3]= 00000060
+# Instruction Memory[4]= 48  Data Memory[4]= 00   Register[4]= 00000010
+# Instruction Memory[5]= 00  Data Memory[5]= 00   Register[5]= 00000030
+# Instruction Memory[6]= 00  Data Memory[6]= 00   Register[6]= 00000032
+# Instruction Memory[7]= 00  Data Memory[7]= 05   Register[7]= 00000042
+# Instruction Memory[8]= 0c  Data Memory[8]= 00   Register[8]= 00000014
+# Instruction Memory[9]= 00  Data Memory[9]= 00   Register[9]= 00000028
+# Instruction Memory[10]= 00  Data Memory[10]= 00   Register[10]= 00000010
+# Instruction Memory[11]= 14  Data Memory[11]= 10   Register[11]= 00000011
+# Instruction Memory[12]= 00  Data Memory[12]= 00   Register[12]= 00000012
+# Instruction Memory[13]= a3  Data Memory[13]= 00   Register[13]= 00000013
+# Instruction Memory[14]= 30  Data Memory[14]= 00   Register[14]= 00000014
+# Instruction Memory[15]= 22  Data Memory[15]= 0c   Register[15]= 00000015
+# Instruction Memory[16]= 8c  Data Memory[16]= 00   Register[16]= 00000016
+# Instruction Memory[17]= 24  Data Memory[17]= 00   Register[17]= 00000017
+# Instruction Memory[18]= 00  Data Memory[18]= 00   Register[18]= 00000018
+# Instruction Memory[19]= 00  Data Memory[19]= 01   Register[19]= 00000019
+# Instruction Memory[20]= ac  Data Memory[20]= 10   Register[20]= 00000020
+# Instruction Memory[21]= 24  Data Memory[21]= 00   Register[21]= 00000021
+# Instruction Memory[22]= 00  Data Memory[22]= 00   Register[22]= 00000022
+# Instruction Memory[23]= 04  Data Memory[23]= 00   Register[23]= 00000023
+# Instruction Memory[24]= 10  Data Memory[24]= 25   Register[24]= 00000024
+# Instruction Memory[25]= 63  Data Memory[25]= 00   Register[25]= 00000025
+# Instruction Memory[26]= ff  Data Memory[26]= 00   Register[26]= 00000026
+# Instruction Memory[27]= fb  Data Memory[27]= 01   Register[27]= 00000027
+# Instruction Memory[28]= 00  Data Memory[28]= 24   Register[28]= 0000000c
+# Instruction Memory[29]= 00  Data Memory[29]= 00   Register[29]= 00000029
+# Instruction Memory[30]= 00  Data Memory[30]= 00   Register[30]= 00000030
+#                    0PC 000000XX  SUM xxxxxxxx   INST xxxxxxxx   REGISTER 00000010 00000030 00000032 00000014 
 run
-#                   60PC 00000008  SUM 00000014   INST 8c240000   REGISTER 00000025 00000030 ffffffd0 00000014 
-run
-#                   80PC 0000000c  SUM 00000018   INST ac240004   REGISTER 00000025 00000030 ffffffd0 00000014 
-add wave -position insertpoint  \
-sim:/processor/sum
-# Break key hit
-run
+#                   40PC xxxxxxxx  SUM xxxxxxxx   INST xxxxxxxx   REGISTER 00000010 00000030 00000032 00000014 
